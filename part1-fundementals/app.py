@@ -1,3 +1,4 @@
+# Also neeed a requirements.txt with the following packages:
 import os
 from tavily import TavilyClient
 from dotenv import load_dotenv
@@ -36,7 +37,7 @@ def flight_search(query: str) -> str:
 
     response = tavily_client.search(
     query=query,
-    include_domains=["emirates.com","etihad.ae","skyscanner.com"]
+    include_domains=["airnewzealand.com", "qantas.com", "jetstar.com"]
     )
 
     results = response.get("results", [])
@@ -63,7 +64,7 @@ def hotel_search(query: str) -> str:
 
     response = tavily_client.search(
     query=query,
-    include_domains=["booking.com","airbnb.com"]
+    include_domains=["booking.com","airbnb.com", "trivago.com"]
     )
 
     results = response.get("results", [])
